@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdtSQLModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bdtSQLEntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="FindPartInDB">
+      <Parameter Name="partNumber" Mode="In" Type="String" />
+      <Parameter Name="partitionName" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Capacitors" EntityType="bdtSQLModel.Capacitors" />
+    <EntitySet Name="Coils" EntityType="bdtSQLModel.Coils" />
+    <EntitySet Name="Connectors" EntityType="bdtSQLModel.Connectors" />
+    <EntitySet Name="Crystals" EntityType="bdtSQLModel.Crystals" />
+    <EntitySet Name="ElectroMechanics" EntityType="bdtSQLModel.ElectroMechanics" />
+    <EntitySet Name="Filters" EntityType="bdtSQLModel.Filters" />
+    <EntitySet Name="IntegratedCircuits" EntityType="bdtSQLModel.IntegratedCircuits" />
+    <EntitySet Name="Modules" EntityType="bdtSQLModel.Modules" />
+    <EntitySet Name="OptoElectronics" EntityType="bdtSQLModel.OptoElectronics" />
+    <EntitySet Name="Oscillators" EntityType="bdtSQLModel.Oscillators" />
+    <EntitySet Name="PowerSupplies" EntityType="bdtSQLModel.PowerSupplies" />
+    <EntitySet Name="Resistors" EntityType="bdtSQLModel.Resistors" />
+    <EntitySet Name="RFComponents" EntityType="bdtSQLModel.RFComponents" />
+    <EntitySet Name="SemiConductors" EntityType="bdtSQLModel.SemiConductors" />
+    <EntitySet Name="Switches" EntityType="bdtSQLModel.Switches" />
+  </EntityContainer>
+  <EntityType Name="Capacitors">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Value" Precision="20" Scale="20" />
+    <Property Type="Decimal" Name="Tolerance" Precision="18" Scale="10" />
+    <Property Type="Decimal" Name="Voltage" Precision="18" Scale="10" />
+    <Property Type="String" Name="Cell_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Composition" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Coils">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Value" Precision="18" Scale="10" />
+    <Property Type="Decimal" Name="Tolerance" Precision="18" Scale="10" />
+    <Property Type="Decimal" Name="Current" Precision="18" Scale="10" />
+    <Property Type="String" Name="Cell_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Connectors">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Voltage" Precision="18" Scale="10" />
+    <Property Type="Decimal" Name="Current" Precision="18" Scale="10" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Crystals">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Frequency" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ElectroMechanics">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Filters">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Frequency" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IntegratedCircuits">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tech_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Material" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OptoElectronics">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Color" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Oscillators">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PowerSupplies">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voltage" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Current" Precision="18" Scale="10" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Resistors">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Value" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="Tolerance" Precision="10" Scale="6" />
+    <Property Type="Decimal" Name="Power" Precision="10" Scale="6" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Composition" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RFComponents">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Frequency" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Current" Precision="18" Scale="10" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SemiConductors">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tech_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Switches">
+    <Key>
+      <PropertyRef Name="Part_Number" />
+    </Key>
+    <Property Type="String" Name="Part_Number" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Label" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cell_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Symbol_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Data_Sheet" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Part_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Package_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Function_Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Manufacturer_Part_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Current" Precision="18" Scale="10" />
+    <Property Type="Decimal" Name="Impedance" Precision="18" Scale="10" />
+    <Property Type="String" Name="Request" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Create" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Form" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DXDB_ID" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldPartNumber" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

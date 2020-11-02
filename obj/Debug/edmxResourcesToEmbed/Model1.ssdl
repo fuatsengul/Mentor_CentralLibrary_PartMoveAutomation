@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdtSQLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="bdtSQLModelStoreContainer">
+    <EntitySet Name="Capacitors" EntityType="bdtSQLModel.Store.Capacitors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Coils" EntityType="bdtSQLModel.Store.Coils" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Connectors" EntityType="bdtSQLModel.Store.Connectors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Crystals" EntityType="bdtSQLModel.Store.Crystals" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ElectroMechanics" EntityType="bdtSQLModel.Store.ElectroMechanics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Filters" EntityType="bdtSQLModel.Store.Filters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IntegratedCircuits" EntityType="bdtSQLModel.Store.IntegratedCircuits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modules" EntityType="bdtSQLModel.Store.Modules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OptoElectronics" EntityType="bdtSQLModel.Store.OptoElectronics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Oscillators" EntityType="bdtSQLModel.Store.Oscillators" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PowerSupplies" EntityType="bdtSQLModel.Store.PowerSupplies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Resistors" EntityType="bdtSQLModel.Store.Resistors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RFComponents" EntityType="bdtSQLModel.Store.RFComponents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SemiConductors" EntityType="bdtSQLModel.Store.SemiConductors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Switches" EntityType="bdtSQLModel.Store.Switches" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Capacitors">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Value" Type="decimal" Precision="20" Scale="20" />
+    <Property Name="Tolerance" Type="decimal" Scale="10" />
+    <Property Name="Voltage" Type="decimal" Scale="10" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Composition" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="500" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Coils">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Value" Type="decimal" Scale="10" />
+    <Property Name="Tolerance" Type="decimal" Scale="10" />
+    <Property Name="Current" Type="decimal" Scale="10" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="500" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Connectors">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Voltage" Type="decimal" Scale="10" />
+    <Property Name="Current" Type="decimal" Scale="10" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Crystals">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Frequency" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="300" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ElectroMechanics">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Filters">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Frequency" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="IntegratedCircuits">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tech Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Material" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="OptoElectronics">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Color" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Oscillators">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="PowerSupplies">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Voltage" Type="nvarchar" MaxLength="100" />
+    <Property Name="Current" Type="decimal" Scale="10" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Resistors">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Value" Type="decimal" Scale="6" />
+    <Property Name="Tolerance" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="Power" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Composition" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="400" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="500" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="RFComponents">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Frequency" Type="nvarchar" MaxLength="100" />
+    <Property Name="Current" Type="decimal" Scale="10" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="SemiConductors">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tech Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Switches">
+    <Key>
+      <PropertyRef Name="Part Number" />
+    </Key>
+    <Property Name="Part Number" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Part Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Part Label" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cell Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Symbol Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Data Sheet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Part Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Package Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Function Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer Part Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="Current" Type="decimal" Scale="10" />
+    <Property Name="Impedance" Type="decimal" Scale="10" />
+    <Property Name="Request" Type="nvarchar" MaxLength="100" />
+    <Property Name="Create" Type="nvarchar" MaxLength="100" />
+    <Property Name="Form" Type="nvarchar" MaxLength="100" />
+    <Property Name="DXDB_ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="OldPartNumber" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <Function Name="FindPartInDB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="partNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="partitionName" Type="nvarchar" Mode="InOut" />
+  </Function>
+</Schema>
